@@ -1,18 +1,23 @@
 const express = require('express'); // Importa o framework Express 
 const router = express.Router(); // Cria um novo roteador 
 const transacoesController = require('../controllers/transacoesController'); // Importa o controlador de transações 
+const authMiddleware = require('../middleware/authMiddleware'); // Importa o middleware de autenticação 
 
 // Definindo uma rota para obter todas as transações 
-router.get('/', transacoesController.getAllTransacoes);
+router.get('/', authMiddleware, transacoesController.getAllTransacoes);
 
 // Definindo uma rota para adicionar uma nova transação 
-router.post('/', transacoesController.addTransacoes); 
+router.post('/',authMiddleware,  transacoesController.addTransacoes); 
 
 // Definindo uma rota para atualizar uma transação existente (substituição completa) 
-router.put('/:id', transacoesController.updateTransacoesPut); 
+router.put('/:id', authMiddleware, transacoesController.updateTransacoesPut); 
 
 // Definindo uma rota para atualizar uma transação existente (atualização parcial) 
-router.patch('/:id', transacoesController.updateTransacoesPatch); 
+router.patch('/:id', authMiddleware, transacoesController.updateTransacoesPatch);
+
+
+// Definindo uma rota para deletar uma transação existente 
+router.delete('/:id', authMiddleware, transacoesController.deleteTransacoes);
 
 // Exportando o roteador 
 module.exports = router; 
