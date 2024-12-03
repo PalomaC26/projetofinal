@@ -1,3 +1,4 @@
+const crypto = require('crypto');
 const db = require('../config/db'); // Importa a configuração do banco de dados 
 const bcrypt = require('bcrypt'); // Importa o bcrypt para criptografar senhas 
 const jwt = require('jsonwebtoken'); // Importa o jsonwebtoken para gerar tokens JWT 
@@ -10,10 +11,9 @@ const registerUsuarios = async (req, res) => {
  
  // Verificar se o usuário já existe no banco de dados 
   try { 
-    const [existingUsuarios] = await db.promise().query('SELECT * FROM usuarios WHERE email = ?', 
-[email]); 
+    const [existingUsuarios] = await db.promise().query('SELECT * FROM usuarios WHERE email = ?', [email]); 
     if (existingUsuarios.length > 0) { 
-      return res.status(400).send('Usuário já registrado :)'); 
+      return res.status(400).send('Usuário já registrado '); 
     } 
  
     // Criptografar a senha usando bcrypt 
@@ -33,9 +33,6 @@ const registerUsuarios = async (req, res) => {
 }; 
 
 
-
-
- 
 // Função para autenticar um usuário
 
 const loginUsuarios = async (req, res) => { 
@@ -56,11 +53,6 @@ const loginUsuarios = async (req, res) => {
     } 
 
 
-
-
-
-
- 
     // Gerar um token JWT 
     const token = jwt.sign({ usuariosId: usuarios[0].id }, process.env.JWT_SECRET, { expiresIn: '1h' }); 
  
@@ -100,11 +92,6 @@ const requestSenhaReset = async (req, res) => {
   }; 
 
 
-
-
-
-
-   
   // Função para redefinir a senha 
   const resetSenha = async (req, res) => { 
     const { token, novaSenha } = req.body; 
@@ -118,20 +105,15 @@ const requestSenhaReset = async (req, res) => {
    
       const hashedsenha = await bcrypt.hash(novaSenha, 10); // Criptografa a nova senha 
    
-       await db.promise().query('UPDATE usuarios SET senha = ?, reset_senha_token = NULL, reset_senha_expires = NULL WHERE id = ?', [hashedsenha, user[0].id]);
+       await db.promise().query('UPDATE usuarios SET senha = ?, reset_senha_token = NULL, reset_senha_expires = NULL WHERE id = ?', [hashedsenha, usuarios[0].id]);
 
-      res.send('Senha redefinida com sucesso'); 
+      res.send('Senha redefinida com sucesso :)'); 
     } catch (err) { 
       console.error('Erro ao redefinir senha:', err); 
       res.status(500).send('Erro ao redefinir senha'); 
     } 
   }; 
    
- 
-
-
-
-
  
 module.exports = { 
   registerUsuarios, 
