@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCartTotal();
 });
 
-//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------botao para voltar ao topo-----------------------------------------//
 
 // Código JavaScript para rolar a página para o topo
 
@@ -165,23 +165,46 @@ const botaoVoltarAoTopo = document.getElementById('voltarAoTopo');
 
 // Adiciona um evento de clique ao botão
 botaoVoltarAoTopo.addEventListener('click', () => {
-    // Faz a página voltar ao topo
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Faz a página voltar ao topo
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // Adiciona um evento de rolagem à janela
 window.addEventListener('scroll', () => {
-    // Verifica a posição da rolagem
-    if (window.scrollY > 100) { // Exibe o botão quando a página é rolada para baixo
-        botaoVoltarAoTopo.style.display = 'block';
-    } else { // Oculta o botão quando a página está no topo
-        botaoVoltarAoTopo.style.display = 'none';
-    }
+  // Verifica a posição da rolagem
+  if (window.scrollY > 100) { // Exibe o botão quando a página é rolada para baixo
+      botaoVoltarAoTopo.style.display = 'block';
+  } else { // Oculta o botão quando a página está no topo
+      botaoVoltarAoTopo.style.display = 'none';
+  }
 });
 
 
+//-----------------------------------------------------------------botao pra descer---------------------------------------//
 
+// Obtém o botão de ir para baixo
+const botaoIrParaBaixo = document.getElementById('irParaBaixo');
 
+// Adiciona um evento de clique ao botão
+botaoIrParaBaixo.addEventListener('click', () => {
+  // Rola suavemente até a seção de destino
+  document.getElementById('secaoDestino').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Adiciona um evento de rolagem à janela
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) { // Exibe o botão quando o usuário rola para baixo
+    botaoIrParaBaixo.style.display = 'block';
+  } else { // Oculta o botão quando a página estiver no topo
+    botaoIrParaBaixo.style.display = 'none';
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("irParaBaixo").addEventListener("click", function() {
+        window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+    });
+});
   
  
  

@@ -37,3 +37,27 @@ const PORT = 4000; // Define a porta a partir da variável de ambiente ou usa a 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`); // Loga uma mensagem informando que o servidor está rodando
 });
+
+
+// servidor para pasta public
+app.use(express.static('public'));
+
+//rota para testa o servidor
+
+/*app.get('/',(req, res)=> {
+  res.send(`servidor esta rodando na porta ${PORT}`)});*/
+
+  /*app.get('/',(req, res)=>{
+    res.sendFile(_dirname + '/public/index.html')
+    });*/
+
+
+
+
+
+
+
+
+
+
+
