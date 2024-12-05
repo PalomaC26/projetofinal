@@ -179,32 +179,43 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
 //-----------------------------------------------------------------botao pra descer---------------------------------------//
 
-// Obtém o botão de ir para baixo
 const botaoIrParaBaixo = document.getElementById('irParaBaixo');
 
 // Adiciona um evento de clique ao botão
 botaoIrParaBaixo.addEventListener('click', () => {
-  // Rola suavemente até a seção de destino
-  document.getElementById('secaoDestino').scrollIntoView({ behavior: 'smooth' });
+  // Faz a página rolar para baixo até o final
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 });
 
 // Adiciona um evento de rolagem à janela
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) { // Exibe o botão quando o usuário rola para baixo
+  // Verifica a posição da rolagem
+  if (window.scrollY < document.body.scrollHeight - window.innerHeight - 100) { 
+    // Exibe o botão quando a página não está no final
     botaoIrParaBaixo.style.display = 'block';
-  } else { // Oculta o botão quando a página estiver no topo
+  } else {
+    // Oculta o botão quando a página está quase no final
     botaoIrParaBaixo.style.display = 'none';
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("irParaBaixo").addEventListener("click", function() {
-        window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
-    });
-});
-  
- 
- 
+//--------------------------------login-------------------------------
+ // Mostrar o modal de login
+function mostrarModal() {
+    document.getElementById('login-modal').style.display = 'block';
+}
+
+// Fechar o modal de login
+function fecharModal() {
+    document.getElementById('login-modal').style.display = 'none';
+}
+
+// Fecha o modal ao clicar fora do conteúdo
+window.onclick = function(event) {
+    const modal = document.getElementById('login-modal');
+    if (event.target === modal) {
+        fecharModal();
+    }
+};

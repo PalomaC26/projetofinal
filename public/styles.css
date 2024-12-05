@@ -9,7 +9,7 @@
 /*index*/
 
 body{
-    background-color: #f7dfbc;
+    background-color: #c7a675;
 
 }
 
@@ -36,7 +36,7 @@ body{
 
 
 .main-header {
-    background-color:;
+    background-color: none;
     background-size: 100% 100%;
     font-family: 'Arial';
     background-position: 50% 39%;
@@ -72,9 +72,13 @@ body{
     cursor: pointer;
 }
 
+.imagem-login {
+
+    border-radius: 50%;
+}
 
 button {
-
+    background-color: white;
     color: white;
     border: none;
     font-size: 20px;
@@ -85,7 +89,8 @@ button {
 }
 
 button:hover {
-    background-color:;
+    background-color: white;
+    color: #ca9443;
 }
 
 input, button {
@@ -167,7 +172,7 @@ input, button {
 
 .description {
     margin-bottom: 30px;
-    color: rgb(61, 5, 5);
+    color: black;
     text-align: center;
     padding-bottom: 10px;
     font-size: 30px;
@@ -280,7 +285,7 @@ li {
 
 
 .container-item{
-    background-color:;
+    background-color: none;
     max-width: 600px;
     padding: 0 16px;
     margin: 0 auto;
@@ -350,7 +355,7 @@ li {
 }
 
 .purchase-button{
-    background-color: rgb(145, 187, 82);
+    background-color: black;
     padding: 12px 10px;
     display: flex;
     border-radius: 10px;
@@ -398,7 +403,7 @@ margin-top: 100px;
     text-align: center;
     margin-bottom: 30px;
     font-size: 35px;
-    background-color:#c7a675;;
+    background-color:white;
   
   }
 
@@ -417,7 +422,7 @@ margin-top: 100px;
     
     font-family:"Roboto", sans-serif;
     color:black;
-    font-size: 30px;
+    font-size: 0px;
     text-align: center;
     
 }
@@ -430,7 +435,7 @@ margin-top: 100px;
 
 
 .button-form{
-    background-color: rgb(145, 187, 82) ;
+    background-color: black;
     padding: 5px 7px;
     border-radius: 8px ;
     font-size: 14px;
@@ -514,7 +519,7 @@ textarea.contact-field {
 
 
 .button-hover{
-    background-color: rgb(145, 187, 82);
+    background-color: black;
     color: white;
     padding: 8px 6px;
     border-radius: 8px;
@@ -655,15 +660,21 @@ textarea.contact-field {
 
 
 #irParaBaixo {
-  
-   display: none;
-   position: fixed;
-   bottom: 350px;
-   left: 23px;
-   border: none;
-   padding: 0;
-   cursor: pointer;
-   border-radius: 50%;
+    bottom: 350px; /* Distância em relação ao fundo da janela */
+    right: 50px; /* Distância em relação à borda direita da janela */
+    background-color: var(--black); /* Cor de fundo do botão */
+    color: var(--blue); /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 0; /* Sem preenchimento interno */
+    cursor: pointer; /* Cursor do mouse muda para ponteiro ao passar sobre o botão */
+    border-radius: 50%;
+    display: flex;
+    position: fixed;
+    right: 50px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
 
   }
 
@@ -689,9 +700,10 @@ textarea.contact-field {
     font-family: "Dancing script";
     font-size: 35px;
     text-align: center;
-    color: azure;
-background-color: #ca9443 ;
+    color: #815410;
+    background-color: black ;
   }
+  
    .contato{
     margin: 900px;
    }
@@ -702,13 +714,12 @@ background-color: #ca9443 ;
  /* Estilo para o vídeo de fundo */
  .video {
     position: absolute;
-     right: 0;
-     bottom: 250px;
-     min-width: 100%;
-     min-height: 100%;
-     z-index: -1;
-     object-fit: cover;
-      
+    right: 0;
+    bottom: 250px;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover; 
  }
   
  
