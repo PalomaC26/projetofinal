@@ -105,18 +105,22 @@ input, button {
 
 
 .header-list-container {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    padding: 16px 0; 
+    display: flex;
+    font-family: "Dancing script";
+    color: #815410;
+    font-size: 35px;
+    background-color: black; 
+    margin-bottom: 100px;
+    height: 35px;
+    
 }
 
 
 .nav-item {
     text-transform: uppercase;
-    color: black;
+    color: #815410;
     margin: auto;
-    font-size: 18px;
+    font-size: 20px;
    
 }
 
@@ -514,7 +518,7 @@ textarea.contact-field {
     height: 350px;
     margin-bottom: 25px;
     box-shadow: 5px 5px 10px black;
-    margin-left: 630px;
+    margin-left: 30px;
 }
 
 
@@ -616,7 +620,7 @@ textarea.contact-field {
 .footer-item {
     width: 50px;
     height: 50px;
-    padding: 15px 0 4px; /*Aplica espaçamento 15px cima/baixo e 0px equerda/direita*/
+    padding: 10px 0 4px; /*Aplica espaçamento 15px cima/baixo e 0px equerda/direita*/
  }
 
 .list-container {
