@@ -77,8 +77,25 @@ body{
     border-radius: 50%;
 }
 
+.frete-gratis {
+    width: 100%;
+    font-size: 16px; 
+    color: #333; 
+    display: flex; 
+    align-items: center; 
+    background-color: #f0f0f0; 
+    padding: 5px; 
+    border-radius: 5px;
+  }
+  
+  .image-carrinho {
+    width: 40px; 
+    margin-right: 10px; 
+  }
+  
+
 button {
-    background-color: white;
+    background-color: #ca9443;
     color: white;
     border: none;
     font-size: 20px;
@@ -92,6 +109,7 @@ button:hover {
     background-color: white;
     color: #ca9443;
 }
+
 
 input, button {
     padding: 10px; 
@@ -109,7 +127,6 @@ input, button {
     font-family: "Dancing script";
     color: #815410;
     font-size: 35px;
-    background-color: black; 
     margin-bottom: 100px;
     height: 35px;
     
@@ -186,13 +203,13 @@ input, button {
 
 .product-container {
     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between;
-     gap: 40px;
-     padding-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 30px;
  }
 
- .product-inicio {
+.product-inicio {
     display: flex;
     flex-direction: initial ;
     text-align: center;

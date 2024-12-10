@@ -10,17 +10,16 @@
 
     <header class="main-header">
 
-            
+        <p class="frete-gratis">
+            <img class="image-carrinho" src="imagens/local_shipping_20dp_815410_FILL0_wght400_GRAD0_opsz20.png" alt="Ícone de frete grátis">
+            Frete grátis nas compras acima de R$100
+        </p>
+          
         <nav class="main-nav">
         
             <ul class="header-list-container">
             
                 <li class="nav-item">
-                    <p>Frete grátis nas compras acima de R$100 </p>
-
-                    <img src="imagens/local_shipping_20dp_815410_FILL0_wght400_GRAD0_opsz20.png">
-                    
-
                     <a href="index.html">
                         <img src="imagens/Sem-Título-1.png" alt="logo" height="250" width="250">
                     </a> 
@@ -28,19 +27,19 @@
 
                 <li>
 
+                <div id="login-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="fecharModal()">&times;</span>
+                        <h2>Login</h2>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="password" id="senha" placeholder="Senha" required>
+                        <button id="login-submit" onclick="fazerLogin()">Entrar</button>
+                        <p id="login-error" style="color: red;"></p>
+                    </div>
+                </div>
+
                 <button id="login-btn" onclick="mostrarModal()">Entrar</button>
                 <button id="logout-btn" style="display:none;" onclick="fazerLogout()">Sair</button>
-
-                <div id="login-modal" class="modal">
-                        <div class="modal-content">
-                            <span class="close" onclick="fecharModal()">&times;</span>
-                            <h2>Login</h2>
-                            <input type="email" id="email" placeholder="Email" required>
-                            <input type="password" id="senha" placeholder="Senha" required>
-                            <button id="login-submit" onclick="fazerLogin()">Entrar</button>
-                            <p id="login-error" style="color: red;"></p>
-                        </div>
-                    </div>
                 
                 </li>
             </ul>
@@ -67,7 +66,7 @@
           
            <h1 class="title-start">Bem-vindos ! Todos os itens comercializados são produzidos manualmente, por isso as peças são únicas e exclusivas, criadas e desenvolvidas de modo sustentável. </p>
            
-           <p class="about-description"</p>
+           <p class="about-description"></p>
 
 
 
