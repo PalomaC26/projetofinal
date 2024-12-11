@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 /*index*/
@@ -78,20 +79,23 @@ body{
 }
 
 .frete-gratis {
-    width: 100%;
-    font-size: 16px; 
-    color: #333; 
-    display: flex; 
-    align-items: center; 
-    background-color: #f0f0f0; 
-    padding: 5px; 
-    border-radius: 5px;
-  }
-  
-  .image-carrinho {
-    width: 40px; 
-    margin-right: 10px; 
-  }
+    display: flex;
+    font-size: 30px;  
+    align-items: center;  
+    justify-content: center;  
+    background-color: black;  
+    color: #815410;
+    font-family: 'Dancing script', cursive;  
+    padding: 10px 0;  /* Espaçamento em cima e embaixo */
+    width: 100%;  /* Ocupa toda a largura da tela */
+}
+
+.image-carrinho {
+    margin-right: 8px;  /* Espaçamento entre o ícone e o texto */
+    width: 35px;  /* Ajuste o tamanho do ícone se necessário */
+    height: 35px;  /* Ajuste o tamanho do ícone se necessário */
+}
+
   
 
 button {
@@ -138,7 +142,7 @@ input, button {
     color: #815410;
     margin: auto;
     font-size: 20px;
-   
+   padding: 20px 0;
 }
 
 
@@ -159,16 +163,15 @@ input, button {
     margin-top: 30px;
     color:#815410;
     font-size: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 2px;
     margin-bottom: auto;
-    margin-top: 30px;
-    text-align: center;
    font-family: 'Dancing script', cursive;
+   padding: 0 5px 30px;
 
 }
 
 .title-start {
-    margin-bottom: 3000px;
+    margin-bottom: 2500px;
     color:#110b01;
     font-size: 60px;
     padding-bottom: 20px;
@@ -176,7 +179,6 @@ input, button {
     margin-top: 30px;
     text-align: center;
    font-family: 'Dancing script', cursive;
-
 }
 
 .about-description {
@@ -275,6 +277,11 @@ li {
 
 /*carrino*/
 
+.ofertas{
+    padding: 0 265px 0;
+    color: #815410;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -292,6 +299,10 @@ li {
 
 .main-about {
     padding: 40px 0px 64px;
+    justify-content: space-between;
+    display: flex;
+    background-color: black;
+    color: aliceblue;
 }
 
 
@@ -325,15 +336,18 @@ li {
 
 .table-head-item {
     text-align: start;
-   border-bottom: 1px solid;
-   padding-bottom: 6px;
-   text-transform: uppercase; 
+    border-bottom: 1px solid;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    padding: 9px;
+    color: #815410; 
 }
 
 .cart-total-container {
     border-top: 1px solid;
     text-align: end;
     padding: 6px 16px 0 0;
+    color: #815410;
 }
 
 .cart-product {
@@ -376,7 +390,7 @@ li {
 }
 
 .purchase-button{
-    background-color: black;
+    background-color: #815410;
     padding: 12px 10px;
     display: flex;
     border-radius: 10px;
@@ -421,11 +435,10 @@ margin-top: 100px;
 
 }
 .container{
-    text-align: center;
-    margin-bottom: 30px;
     font-size: 35px;
-    background-color:white;
-  
+    background-color:black;
+  justify-content: space-between;
+  display: flex;
   }
 
   
@@ -611,7 +624,8 @@ textarea.contact-field {
 
 .second-col,
 .third-col {
-    width: 30%; 
+    width: 30%;
+    color: #815410;
 }
 
 
@@ -625,29 +639,38 @@ textarea.contact-field {
 /*rodapé*/
 
 
+
 .main-footer{
-    background-color: black;
+    
     color:#815410;
-    padding: 8px 0px;
-    font-size: 30px;
+    padding: 14px 0;
+    font-size: 50px;
     font-family: 'Dancing Script', cursive;
-    margin-top: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:black; 
+    text-align: center;
+    padding: 10px 0; 
+    
 }
 
 .footer-item {
-    width: 50px;
-    height: 50px;
-    padding: 10px 0 4px; /*Aplica espaçamento 15px cima/baixo e 0px equerda/direita*/
+    width: 100%;
+    height: 100%;
+    padding: 10px 0 4px; 
  }
 
 .list-container {
-    display: flex; /*Deixar tudo na mesma linha*/
-    align-items: center; /* Alinha todos os elementos*/
-    justify-content: space-around; /*Colar nome de um lado e lista de icones do outro*/
+    margin-bottom: 70px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
  }
 
  .title-footer{
-    font-size: 28px;
+    font-size: 30px;
     text-align: 15px 0;
     font-family: "Dancing script", cursive;
     text-align: center;
