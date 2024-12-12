@@ -5,13 +5,15 @@
     padding: 0;
     box-sizing: border-box;
     
+    
 }
 
 /*index*/
 
 body{
     background-color: #c7a675;
-
+    border: black;
+    border-radius: 6px;
 }
 
 .promotion {
@@ -73,6 +75,80 @@ body{
     cursor: pointer;
 }
 
+/* Estilo básico para o modal */
+body {
+    font-family: Arial, sans-serif;
+}
+
+#modal-contato {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Fundo semi-transparente */
+    padding-top: 60px;
+}
+
+/* Conteúdo do modal */
+.modal-conteudo {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Estilo do botão de fechar */
+.fechar {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+
 .imagem-login {
 
     border-radius: 50%;
@@ -106,7 +182,7 @@ button {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px;
+    margin: 20px;
 }
 
 button:hover {
@@ -278,7 +354,7 @@ li {
 /*carrino*/
 
 .ofertas{
-    padding: 0 265px 0;
+    padding: 0 270px 0;
     color: #815410;
 }
 
@@ -426,7 +502,7 @@ li {
 
 
 
-/*contato*/
+/*---------contato--------*/
 
 .list{
 margin-top: 100px;
@@ -532,7 +608,7 @@ textarea.contact-field {
 }
 
 
-/*sobre*/
+/*----------sobre--------*/
 
 
 .title{
@@ -575,7 +651,7 @@ textarea.contact-field {
 
 
 
-/*produtos*/
+/*----------produtos----------*/
 
 
 .product-container {
@@ -636,55 +712,72 @@ textarea.contact-field {
 
 
 
-/*rodapé*/
+/*--------rodape--------*/
 
+.main-footer {
+    background-color: black; 
+    color: #815410; 
+    padding: 35px; 
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+}
 
+.title-footer {
+    font-size: 18px; 
+    margin-bottom: 20px; 
+}
 
-.main-footer{
-    
-    color:#815410;
-    padding: 14px 0;
-    font-size: 50px;
-    font-family: 'Dancing Script', cursive;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color:black; 
-    text-align: center;
-    padding: 10px 0; 
-    
+.list-container {
+    list-style-type: none; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
 }
 
 .footer-item {
-    width: 100%;
-    height: 100%;
-    padding: 10px 0 4px; 
- }
+    display: inline-block; 
+}
 
-.list-container {
-    margin-bottom: 70px;
-    display: flex; 
-    align-items: center; 
-    justify-content: space-around; 
- }
+.footer-item a {
+    display: block; 
+    width: 40px;
+    height: 40px; 
+}
 
- .title-footer{
-    font-size: 30px;
-    text-align: 15px 0;
-    font-family: "Dancing script", cursive;
-    text-align: center;
- }
- 
+.footer-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    transition: transform 0.3s ease; 
+}
+
+
+.footer-item a:hover img {
+    transform: scale(1.1); 
+}
+
+@media (max-width: 600px) {
+    .list-container {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    .title-footer {
+        font-size: 16px; 
+    }
+}
+
+/*------botao voltar ao topo-------*/
 
 #voltarAoTopo{
-    bottom: 350px; /* Distância em relação ao fundo da janela */
-    right: 50px; /* Distância em relação à borda direita da janela */
-    background-color: var(--black); /* Cor de fundo do botão */
-    color: var(--blue); /* Cor do texto do botão */
-    border: none; /* Sem borda */
-    padding: 0; /* Sem preenchimento interno */
-    cursor: pointer; /* Cursor do mouse muda para ponteiro ao passar sobre o botão */
+    bottom: 350px; 
+    right: 50px; 
+    background-color: var(--black); 
+    color: var(--blue); 
+    border: none; 
+    padding: 0;
+    cursor: pointer; 
     border-radius: 50%;
     display: flex;
     position: fixed;
@@ -701,16 +794,16 @@ textarea.contact-field {
     height: 45px;
 }
 
-
+/*-------botao para baixo------*/
 
 #irParaBaixo {
-    bottom: 350px; /* Distância em relação ao fundo da janela */
-    right: 50px; /* Distância em relação à borda direita da janela */
-    background-color: var(--black); /* Cor de fundo do botão */
-    color: var(--blue); /* Cor do texto do botão */
-    border: none; /* Sem borda */
-    padding: 0; /* Sem preenchimento interno */
-    cursor: pointer; /* Cursor do mouse muda para ponteiro ao passar sobre o botão */
+    bottom: 350px; 
+    right: 50px; 
+    background-color: var(--black); 
+    color: var(--blue); 
+    border: none; 
+    padding: 0; 
+    cursor: pointer; 
     border-radius: 50%;
     display: flex;
     position: fixed;
@@ -720,42 +813,38 @@ textarea.contact-field {
     cursor: pointer;
     border-radius: 50%;
 
-  }
+}
 
-  
-  
- 
 
  
-  .nav-item a {
-     text-decoration: none; /*remove o underline do ancora*/
-     color: inherit; /*herda a cor do elemento pai (neste caso é o nav-item)*/
+.nav-item a {
+     text-decoration: none; 
+     color: inherit; 
      
-  }
+}
  
-  .nav-item:hover {
-    
-    background-color: rgba(0, 0, 0, 0.5); /* Transparência média no fundo */
+.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 5px;
     padding: 0px 3px;
-  }
+}
 
-  .title-contact{
+.title-contact{
     font-family: "Dancing script";
     font-size: 35px;
     text-align: center;
     color: #815410;
     background-color: black ;
-  }
+}
   
-   .contato{
+.contato{
     margin: 900px;
-   }
+}
 
 
- /*---------------------------Vídeo-------------------------------------*/
+ /*---------------------------Video-------------------------------------*/
 
- /* Estilo para o vídeo de fundo */
+ /* Estilo para o video de fundo */
  .video {
     position: absolute;
     right: 0;
@@ -764,6 +853,6 @@ textarea.contact-field {
     min-height: 100%;
     z-index: -1;
     object-fit: cover; 
- }
-  
+}
+
  
