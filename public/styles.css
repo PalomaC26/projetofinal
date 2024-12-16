@@ -11,7 +11,7 @@
 /*index*/
 
 body{
-    background-color: #c7a675;
+    background-color: #ca9443;
     border: black;
     border-radius: 6px;
     font-family: Arial, sans-serif;
@@ -172,7 +172,7 @@ form button:hover {
 
 button {
     background-color: #ca9443;
-    color: white;
+    color: #815410;
     border: none;
     font-size: 20px;
     padding: 10px 15px;
@@ -870,4 +870,3 @@ textarea.contact-field {
     object-fit: cover; 
 }
 
- 
