@@ -192,7 +192,7 @@ button {
 }
 
 button:hover {
-    background-color: white;
+    background-color: black;
     color: #ca9443;
 }
 
@@ -200,7 +200,7 @@ button:hover {
 input, button {
     padding: 10px; 
     margin-bottom: 10px; 
-    background-color: #4CAF50;
+    background-color: #c7a675;
     color: #815410;
     font-family: "Dancing script cursive"; 
     flex-direction: column-reverse;
