@@ -247,3 +247,27 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+//----------------------------------------------------------------------------------//
+
+// Obter elementos
+const modal = document.getElementById("myModal");
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+
+// Quando o usuário clicar no botão "Cadastre-se", abrir o modal
+openModalBtn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Quando o usuário clicar no "X", fechar o modal
+closeModalBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Quando o usuário clicar fora do modal, também fechar
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
