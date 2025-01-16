@@ -39,63 +39,24 @@
 </div>
 
 
- <!-- Botão para abrir o modal -->
- <button id="openModalBtn"> É novo por aqui ? Cadastre-se</button>
+ <!-- O Modal Cadastro -->
+<div id="cadastro-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fecharModalCadastro()">&times;</span>
+        <h2>Cadastro</h2>
+        <input type="text" id="nome-cadastro" placeholder="Nome" required>
+        <input type="email" id="email-cadastro" placeholder="Email" required>
+        <input type="telefone" id="telefone-cadastro" placeholder="Telefone" required>
+        <input type="password" id="senha-cadastro" placeholder="Senha" required>
+        <input type="password" id="confirmar-senha" placeholder="Confirmar Senha" required>
+        <button id="cadastro-submit" onclick="fazerCadastro()">Cadastrar</button>
+        <p id="cadastro-error" style="color: red;"></p>
+    </div>
+</div>
+<button class="person" id="cadastro-btn" onclick="mostrarModalCadastro()"><p><img src="imagens/person_33dp_815410_FILL0_wght400_GRAD0_opsz40.png" alt="" height="30">É novo por aqui ? Cadastre-se</p></button>
 
- <!-- O Modal cadastre-se-->
- <div id="myModal" class="modal">
-     <!-- Conteúdo do Modal -->
-     <div class="modal-content">
-         <span id="closeModalBtn" class="close">&times;</span>
-         <h2>Cadastro</h2>
-         <form id="signupForm">
-             <label for="name">Nome:</label>
-             <input type="text" id="name" name="name" required><br><br>
-
-             <label for="email">E-mail:</label>
-             <input type="email" id="email" name="email" required><br><br>
-
-             <label for="telefone">Telefone:</label>
-             <input type="telefone" id="telefone" name="telefone" required><br><br>
-
-             <label for="endereco">Endereco:</label>
-             <input type="endereco" id="endereco" name="endereco" required><br><br>
-
-             <label for="Data de cadastro">data de cadastro:</label>
-             <input type="data de cadastro" id="data de cadastro" name="data de cadastro" required><br><br>
-
-             <label for="senha">Senha:</label>
-             <input type="senha" id="senha" name="senha" required><br><br>
-
-             <button type="submit">Cadastrar</button>
-         </form>
-     </div>
- </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        <nav class="main-nav">
+   
+    <nav class="main-nav">
         
             <ul class="header-list-container">
 
@@ -112,7 +73,16 @@
              
                              <label for="email">E-mail:</label>
                              <input type="email" id="email" name="email" required>
+
+                             <label for="telefne">Telefone:</label>
+                             <input type="telefone" id="telefone" name="telefone" required>
              
+                             <label for="endereco">Endereco:</label>
+                             <input type="endereco" id="endereco" name="endereco" required>
+
+                             <label for="data-de-nascimento">Data De Nascimento:</label>
+                             <input type="data-de-nascimento" id="data-de-nascimento" name="data-de-nascimento" required>
+
                              <label for="mensagem">Mensagem:</label><br>
                              <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
              
@@ -120,9 +90,10 @@
                          </form>
                      </div>
                  </div>
+                 
 
                 <li class="nav-item">
-                    <a  href="index.html">Artesanato.com</a> 
+                    <a  href="index.html" class="site-title">Artesanato.com</a> 
                 </li>
 
                 <li>

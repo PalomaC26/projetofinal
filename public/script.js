@@ -202,23 +202,32 @@ window.addEventListener('scroll', () => {
 });
 
 //--------------------------------login-------------------------------
- // Mostrar o modal de login
+ // Função para mostrar o modal de login
 function mostrarModal() {
     document.getElementById('login-modal').style.display = 'block';
 }
 
-// Fechar o modal de login
+// Função para fechar o modal de login
 function fecharModal() {
     document.getElementById('login-modal').style.display = 'none';
 }
 
-// Fecha o modal ao clicar fora do conteúdo
-window.onclick = function(event) {
-    const modal = document.getElementById('login-modal');
-    if (event.target === modal) {
-        fecharModal();
+// Função para realizar o login (exemplo simples)
+function fazerLogin() {
+    var nome = document.getElementById('nome').value;
+    var email = document.getElementById('email').value;
+    var senha = document.getElementById('senha').value;
+
+    // Simulação de validação de login
+    if (nome === "" || email === "" || senha === "") {
+        document.getElementById('login-error').textContent = "Preencha todos os campos!";
+    } else {
+        // Aqui você pode adicionar lógica para enviar os dados para o servidor ou validar
+        alert("Login realizado com sucesso!");
+        fecharModal(); // Fecha o modal após o login (simulado)
     }
-};
+}
+
 
 //----------------------------contato--------------------------//
 // Mostrar o modal de contato
@@ -250,24 +259,30 @@ window.onclick = function(event) {
 
 //----------------------------------------------------------------------------------//
 
-// Obter elementos
-const modal = document.getElementById("myModal");
-const openModalBtn = document.getElementById("openModalBtn");
-const closeModalBtn = document.getElementById("closeModalBtn");
-
-// Quando o usuário clicar no botão "Cadastre-se", abrir o modal
-openModalBtn.onclick = function() {
-    modal.style.display = "block";
+// Função para mostrar o modal de cadastro
+function mostrarModalCadastro() {
+    document.getElementById('cadastro-modal').style.display = 'block';
 }
 
-// Quando o usuário clicar no "X", fechar o modal
-closeModalBtn.onclick = function() {
-    modal.style.display = "none";
+// Função para fechar o modal de cadastro
+function fecharModalCadastro() {
+    document.getElementById('cadastro-modal').style.display = 'none';
 }
 
-// Quando o usuário clicar fora do modal, também fechar
-window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
+// Função para processar o cadastro (exemplo simples)
+function fazerCadastro() {
+    var nome = document.getElementById('nome-cadastro').value;
+    var email = document.getElementById('email-cadastro').value;
+    var senha = document.getElementById('senha-cadastro').value;
+    var confirmarSenha = document.getElementById('confirmar-senha').value;
+
+    if (senha !== confirmarSenha) {
+        document.getElementById('cadastro-error').textContent = 'As senhas não coincidem.';
+        return;
     }
+
+    // Aqui você pode adicionar lógica para enviar os dados para o servidor, validar, etc.
+    alert('Cadastro realizado com sucesso!\n' + 'Nome: ' + nome + '\nEmail: ' + email);
+    fecharModalCadastro(); // Fechar o modal após o cadastro
 }
+
