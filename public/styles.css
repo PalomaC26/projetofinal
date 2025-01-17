@@ -688,12 +688,15 @@ textarea.contact-field {
 }
 
 .product-image {
-    width: 100%;
-    height: auto;
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
 }
 
+
 .product-title {
-    font-size: 16px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
     margin: 10px 0;
@@ -701,26 +704,21 @@ textarea.contact-field {
 
 .product-price-container {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f4f4f4;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Alinha os itens verticalmente */
+    text-align: center; /* Garante que o texto do preço também fique centralizado */
 }
 
 .product-price {
-    font-size: 18px;
-    color: #ca9443;
+    margin-bottom: 10px; /* Espaço entre o preço e o botão */
+    font-size: 20px;
 }
 
 .button-hover {
-    background-color: black;
-    color: #ca9443;
-    padding: 8px 6px;
-    border-radius: 8px;
-    font-size: 12px;
-    box-shadow: 3px 3px black;
-    font-weight: bold;
-    cursor: pointer;
+    margin-top: 5px; /* Opcional: adiciona um pouco de espaço entre o botão e o preço */
 }
+
 
 .button-hover:hover {
     opacity: 0.8;
