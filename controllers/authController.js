@@ -113,11 +113,44 @@ const requestSenhaReset = async (req, res) => {
       res.status(500).send('Erro ao redefinir senha'); 
     } 
   }; 
+
+
+  
+   // Função para registrar um novo usuário 
+const inscricoes = async (req, res) => { 
+  const { nome, email, telefone, data_inscricao} = req.body; // Desestrutura os dados do corpo da requisição 
+ 
+ // Verificar se o usuário já existe no banco de dados 
+  try { 
+    const [existingIncricoes] = await db.promise().query('SELECT * FROM inscricoes WHERE email = ?', [email]); 
+    if (existingIncricoes.length > 0) { 
+      return res.status(400).send('inscricao já registrada '); 
+    } 
+ 
+    // Criptografar a senha usando bcrypt 
+    //const hashedPassword = await bcrypt.hash(senha, 10); 
+ 
+    // Inserir o novo usuário no banco de dados 
+    await db.promise().query( 
+      'INSERT INTO inscricoes (nome, email, telefone, data_inscricao) VALUES (?, ?, ?,?)', 
+      [nome, email, telefone, data_inscricao] 
+    ); 
+ 
+    res.status(201).send('incricao registrada com sucesso :)'); 
+  } catch (err) { 
+    console.error('Erro ao registrar inscricao :(', err); 
+    res.status(500).send('Erro ao registrar inscricao :('); 
+  } 
+}; 
+
+
+  
    
  
 module.exports = { 
   registerUsuarios, 
   loginUsuarios,
   requestSenhaReset,
-  resetSenha
+  resetSenha,
+  inscricoes
 };

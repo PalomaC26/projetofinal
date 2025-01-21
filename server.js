@@ -44,12 +44,12 @@ app.use(express.static('public'));
 
 //rota para testa o servidor
 
-/*app.get('/',(req, res)=> {
-  res.send(`servidor esta rodando na porta ${PORT}`)});*/
+app.get('/',(req, res)=> {
+  res.send(`servidor esta rodando na porta ${PORT}`)});
 
-  /*app.get('/',(req, res)=>{
+  app.get('/',(req, res)=>{
     res.sendFile(_dirname + '/public/index.html')
-    });*/
+    });
 
 
 

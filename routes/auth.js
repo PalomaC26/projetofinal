@@ -13,4 +13,7 @@ router.post('/request-senha-reset', authController.requestSenhaReset);
 // Rota para redefinir a senha 
 router.post('/reset-senha', authController.resetSenha);
 
+//rota para inscrição
+router.post('/inscricoes',authController.inscricoes )
+
 module.exports = router; // Exporta o roteador

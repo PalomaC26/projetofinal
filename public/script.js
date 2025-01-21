@@ -286,3 +286,31 @@ function fazerCadastro() {
     fecharModalCadastro(); // Fechar o modal após o cadastro
 }
 
+
+
+
+
+
+
+//Script para validação e simulação de envio do formulário
+const form = document.getElementById('formInscricao');
+const message = document.getElementById('message');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+
+    if (!nome || !email || !telefone) {
+        message.textContent = "Por favor, preencha todos os campos!";
+        message.style.color = "red";
+    } else {
+        message.textContent = "Inscrição enviada com sucesso! Obrigado por se inscrever.";
+        message.style.color = "green";
+
+        // Limpa os campos após a inscrição
+        form.reset();
+    }
+});
