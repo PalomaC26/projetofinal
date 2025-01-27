@@ -9,31 +9,37 @@
 <body>
 
     <header class="main-header">
-
-
-
         <p class="frete-gratis">
             <img class="image-carrinho" src="imagens/local_shipping_20dp_815410_FILL0_wght400_GRAD0_opsz20.png" alt="Ícone de frete grátis">
             Frete grátis nas compras acima de R$100
         </p>
 
-
-        <!-- O Modal login-->
+        <div>
+            <a class="link-artesanato" href="index.html">Artesanato</a>
+        </div>
+    
+        <div class="button-container">
+            <!-- Botão de Login -->
+            <button class="person" id="login-btn" onclick="mostrarModal()">
+                <p><img src="imagens/person_33dp_815410_FILL0_wght400_GRAD0_opsz40.png" alt="" height="30">Olá, faça o login aqui</p>
+            </button>
+     
+        </div>
+    
+        <!-- O Modal login -->
         <div id="login-modal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="fecharModal()">&times;</span>
                 <h2>Login</h2>
-                <input type="nome" id="nome" placeholder="nome" required>
+                <input type="text" id="nome" placeholder="nome" required>
                 <input type="email" id="email" placeholder="Email" required>
                 <input type="password" id="senha" placeholder="Senha" required>
                 <button id="login-submit" onclick="fazerLogin()">Entrar</button>
                 <p id="login-error" style="color: red;"></p>
-             <link rel="stylesheet" href="cadastro">   <button>É novo por aqui ? Cadastre-se</button>
+                <button onclick="mostrarModalCadastro()">Cadastre-se</button>
             </div>
         </div>
-   
-        <button class="person" id="login-btn" onclick="mostrarModal()"><p><img  src="imagens/person_33dp_815410_FILL0_wght400_GRAD0_opsz40.png" alt="" height="30">Olá, faça o login aqui</p></button>
-
+    
         <!-- O Modal Cadastro -->
         <div id="cadastro-modal" class="modal">
             <div class="modal-content">
@@ -41,59 +47,50 @@
                 <h2>Cadastro</h2>
                 <input type="text" id="nome-cadastro" placeholder="Nome" required>
                 <input type="email" id="email-cadastro" placeholder="Email" required>
-                <input type="telefone" id="telefone-cadastro" placeholder="Telefone" required>
+                <input type="tel" id="telefone-cadastro" placeholder="Telefone" required>
                 <input type="password" id="senha-cadastro" placeholder="Senha" required>
                 <input type="password" id="confirmar-senha" placeholder="Confirmar Senha" required>
                 <button id="cadastro-submit" onclick="fazerCadastro()">Cadastrar</button>
                 <p id="cadastro-error" style="color: red;"></p>
             </div>
         </div>
-        <button class="person" id="cadastro-btn" onclick="mostrarModalCadastro()"><p><img src="imagens/person_33dp_815410_FILL0_wght400_GRAD0_opsz40.png" alt="" height="30">É novo por aqui ? Cadastre-se</p></button>
-
-   
+    
         <nav class="main-nav">
-        
             <ul class="header-list-container">
-
-                 <!-- Modal de Contato -->
-                 <button class="whatsapp" id="btn-contato"><img src="imagens/whatsapp_3670051.png" height="45"></button>
-                 <!-- O Modal -->
-                 <div id="modal-contato" class="modal">
-                     <div class="modal-conteudo">
-                         <span class="fechar" id="fechar-modal">&times;</span>
-                         <h2>Formulário de Contato</h2>
-                         <form id="form-contato">
-                             <label for="nome">Nome:</label>
-                             <input type="text" id="nome" name="nome" required>
-             
-                             <label for="email">E-mail:</label>
-                             <input type="email" id="email" name="email" required>
-
-                             <label for="telefne">Telefone:</label>
-                             <input type="telefone" id="telefone" name="telefone" required>
-             
-                             <label for="endereco">Endereco:</label>
-                             <input type="endereco" id="endereco" name="endereco" required>
-
-                             <label for="data-de-nascimento">Data De Nascimento:</label>
-                             <input type="data-de-nascimento" id="data-de-nascimento" name="data-de-nascimento" required>
-
-                             <label for="mensagem">Mensagem:</label><br>
-                             <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-             
-                             <button type="submit">Enviar</button>
-                         </form>
-                     </div>
-                 </div>
-                 
-
-                <li class="nav-item">
-                    <a  href="index.html" class="site-title">Artesanato.com</a> 
-                </li>
-
+                <button class="whatsapp" id="btn-contato"><img src="imagens/whatsapp_3670051.png" height="45"></button>
+                <div id="modal-contato" class="modal">
+                    <div class="modal-conteudo">
+                        <span class="fechar" id="fechar-modal">&times;</span>
+                        <h2>Formulário de Contato</h2>
+                        <form id="form-contato">
+                            <label for="nome"></label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                            
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                            
+                            <label for="telefone"></label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+                            
+                            <label for="endereco"></label>
+                            <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+                            
+                            <label for="data-de-nascimento"></label>
+                            <input type="date" id="data-de-nascimento" name="data-de-nascimento" required>
+                            
+                            <label for="mensagem"></label><br>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+                            
+                            <button type="submit">Enviar</button>
+                        </form>
+                        
+                    </div>
+                </div>
+                
             </ul>
         </nav>
     </header>
+    
 
     <button id="irParaBaixo">
         <img class="scroll" src="imagens/seta para baixo.png" alt="ir Para Baixo">

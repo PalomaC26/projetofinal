@@ -56,7 +56,7 @@ function adicionarProdutoAoCarrinho(event) {
     botoesRemover.forEach(botao => {
         botao.addEventListener('click', () => {
             // Seleciona a linha do produto a ser removido
-            const linhaProduto = botao.closest('.cart-product');
+           botoesRemover.forEach = botao.closest('.cart-product');
             // Remove a linha do produto do carrinho
             linhaProduto.remove();
             // Chama a função para atualizar o valor total do carrinho
@@ -68,7 +68,7 @@ function adicionarProdutoAoCarrinho(event) {
     updateCartTotal();
 }
 
-/// Função para finalizar a compra
+// Função para finalizar a compra
 function finalizarCompra() {
     // Seleciona o elemento que mostra o valor total do carrinho
     const cartTotalElement = document.querySelector(".cart-total-container span");
@@ -183,7 +183,7 @@ window.addEventListener('scroll', () => {
 
 const botaoIrParaBaixo = document.getElementById('irParaBaixo');
 
-// Adiciona um evento de clique ao botão
+// Adiciona um evento de rolar ao clique no botão
 botaoIrParaBaixo.addEventListener('click', () => {
   // Faz a página rolar para baixo até o final
   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
@@ -285,9 +285,6 @@ function fazerCadastro() {
     alert('Cadastro realizado com sucesso!\n' + 'Nome: ' + nome + '\nEmail: ' + email);
     fecharModalCadastro(); // Fechar o modal após o cadastro
 }
-
-
-
 
 
 

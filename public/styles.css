@@ -46,8 +46,25 @@ body{
     margin-bottom: 50px;
     border-radius: 3%;
     border: black;
+    
 }
 
+
+
+.link-artesanato {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: black; /* Cor do texto */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento interno (padding) */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    
+}
+
+.link-artesanato:hover {
+    background-color: #3498db; /* Cor de fundo quando passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
 
 
 /*modal Entrar*/
@@ -86,7 +103,25 @@ body{
     margin-top: 30px;
     margin-bottom: 30px;
 }
-  
+
+.modal-content input,
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    color: white;
+}
 
 /*modal contato*/
 
@@ -143,7 +178,7 @@ form input, form textarea {
 
 form button {
     padding: 10px;
-    background-color:#ca9443;
+    background-color:#007bff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -151,14 +186,17 @@ form button {
 }
 
 form button:hover {
-    background-color: #ca9443;
+    background-color: limegreen;
+    color: white;
 }
 
 .whatsapp {
     position: fixed;
     margin-top: 400px;
     background-color: transparent;
-    background-size: cover; 
+    background-size: cover;
+    border: none;
+    cursor: pointer; 
 }
 
 .imagem-login {
@@ -187,7 +225,6 @@ form button:hover {
   
 button {
     background-color: #ca9443;
-    color: #815410;
     border: none;
     font-size: 20px;
     padding: 10px 15px;
@@ -205,8 +242,6 @@ button:hover {
 input, button {
     padding: 10px; 
     margin-bottom: 10px; 
-    background-color: #c7a675;
-    color: #815410;
     font-family: "Dancing script cursive"; 
     flex-direction: column-reverse;
 }
@@ -220,12 +255,11 @@ input, button {
 
 .header-list-container {
     display: flex;
-    font-family: "Dancing script";
-    color: #815410;
-    font-size: 35px;
+    font-family: "Arial";
+
     margin-bottom: 100px;
     height: 35px;
-    
+    width: 100%;
 }
 
 
@@ -237,6 +271,7 @@ input, button {
     margin-top: 5px;
     gap: 500px;
     margin-right: 6000px;
+    
 }
 
 
@@ -482,7 +517,7 @@ li {
 
 
 .remove-product-button{
-    color: black;
+    color: white;
     padding: 11px 18px;
     border-radius: 8px;
     font-size: 16px;
@@ -931,6 +966,7 @@ textarea.contact-field {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4); /* fundo semi-transparente */
     overflow: auto;
+    
 }
 
 .modal-content {
@@ -938,7 +974,6 @@ textarea.contact-field {
     margin: 10% auto;
     padding: 20px;
     border-radius: 8px;
-    width: 80%;
     max-width: 400px;
     position: relative;
 }
@@ -981,23 +1016,37 @@ input {
     border-radius: 5px;
 }
 
-button {
-    padding: 10px;
+/* Container para os botões de login e cadastro */
+.button-container {
+    display: flex;
+    justify-content: flex-end;  
+    gap: 10px;  
+    width: 100%;  
+    position: absolute; 
+    right: 0; 
+    top: 20px;  
+    padding: 10px;  
+}
+
+/* Estilo básico para os botões */
+button.person {
+    padding: 10px 20px;
     background-color: black;
-    color: #815410;
+    color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
+    font-size: 16px;
 }
+
+button.person:hover {
+    background-color: #0056b3; 
+}
+
 
 button:hover {
     background-color: #45a0;
-}
-
-
-
- 
+} 
 
 .curso {
     max-width: 600px;

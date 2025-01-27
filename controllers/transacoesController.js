@@ -51,7 +51,7 @@ const addTransacoes = (req, res) => {
 
   
 
-///Função para atualizar uma locação existente (substituição completa)
+//Função para atualizar uma locação existente (substituição completa)
 const updateTransacoesPut = (req, res) => {
     const{id} = req.params;
     const { data, descricao, valor, conta, status} = req.body;
