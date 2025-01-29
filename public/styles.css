@@ -39,31 +39,33 @@ body{
     background-color: #ca9443;
     background-size: 100%;
     font-family: 'Arial';
-    background-position: 100%;
+    background-position: center;
     display: flex;
     flex-direction: column; 
     align-items: center;
     margin-bottom: 50px;
     border-radius: 3%;
     border: black;
-    
 }
 
+
+.artesanato {
+    margin-right: 50%;
+    margin-top: 50px;
+}
 
 
 .link-artesanato {
-    text-decoration: none; /* Remove o sublinhado do link */
-    color: black; /* Cor do texto */
-    font-size: 18px; /* Tamanho da fonte */
-    padding: 10px 20px; /* Espaçamento interno (padding) */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s, color 0.3s; /* Transição suave */
-    
+    font-family: "Dancing script"; 
+    font-size: 70px; 
+    text-decoration: none; 
+    color: #815410;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid #815410;
 }
 
 .link-artesanato:hover {
-    background-color: #3498db; /* Cor de fundo quando passar o mouse */
-    color: white; /* Cor do texto ao passar o mouse */
+    color: #ff6347; 
 }
 
 
@@ -114,13 +116,25 @@ body{
 }
 
 .modal-content button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ca9443;
+    color: #815410;
     cursor: pointer;
 }
 
 .modal-content button:hover {
     color: white;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%;
+    }
 }
 
 /*modal contato*/
@@ -178,7 +192,7 @@ form input, form textarea {
 
 form button {
     padding: 10px;
-    background-color:#007bff;
+    background-color:#ca9443;
     color: white;
     border: none;
     border-radius: 5px;
@@ -186,7 +200,7 @@ form button {
 }
 
 form button:hover {
-    background-color: limegreen;
+    background-color: #c7a675;
     color: white;
 }
 
@@ -258,7 +272,7 @@ input, button {
     font-family: "Arial";
 
     margin-bottom: 100px;
-    height: 35px;
+    height: auto;
     width: 100%;
 }
 
@@ -293,6 +307,16 @@ input, button {
     transform: scale(1.2);
 }
 
+@media (max-width: 768px) {
+    .header-list-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 15px;
+    }
+}
 
 .site-title {
     font-size: 24px;
@@ -311,9 +335,9 @@ input, button {
     font-size: 60px;
     padding-bottom: 2px;
     margin-bottom: auto;
-   font-family: 'Dancing script', cursive;
-   padding: 0 5px 30px;
-   text-align: center;
+    font-family: 'Dancing script', cursive;
+    padding: 0 5px 30px;
+    text-align: center;
 }
 
 .title-start {
@@ -324,7 +348,7 @@ input, button {
     margin-bottom: auto;
     margin-top: 30px;
     text-align: center;
-   font-family: 'Dancing script', cursive;
+    font-family: 'Dancing script', cursive;
 }
 
 .about-description {
@@ -336,7 +360,6 @@ input, button {
     font-family: 'Dancing Script', cursive;
     margin: 30px;
 }
-
 
 
 .description {
@@ -357,11 +380,6 @@ input, button {
     align-items: center;
  }
  
-.product-title {
-    font-size: 28px;
-    margin-bottom: 6px;
-    font-family: "Dancing script";
-}
 
 
 .title-text{
@@ -381,9 +399,10 @@ input, button {
 li {
     list-style-type: none;
 }
-    .nav-item:hover{
-        display: block;
-    }
+
+.nav-item:hover{
+    display: block;
+}
 
 .sub-items{
     display: none;
@@ -735,6 +754,8 @@ textarea.contact-field {
     font-weight: bold;
     text-align: center;
     margin: 10px 0;
+    margin-bottom: 6px;
+    font-family: "Dancing script";
 }
 
 .product-price-container {
@@ -763,11 +784,17 @@ textarea.contact-field {
 
 @media (max-width: 768px) {
     .product-container {
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
     }
 
     .product {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -903,19 +930,6 @@ textarea.contact-field {
 }
 
 
- /*---------------------------Video-------------------------------------*/
-
- /* Estilo para o video de fundo */
- .video {
-    position: absolute;
-    right: 0;
-    bottom: 250px;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    object-fit: cover; 
-}
-
 
 /*----------------------------modal cadastre-se------------------------*/
 
@@ -964,7 +978,7 @@ textarea.contact-field {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.4); 
     overflow: auto;
     
 }
@@ -996,6 +1010,7 @@ textarea.contact-field {
 
 h2 {
     text-align: center;
+    color: #815410;
 }
 
 form {
@@ -1032,15 +1047,18 @@ input {
 button.person {
     padding: 10px 20px;
     background-color: black;
-    color: white;
+    font-family: "Dancing Script";
+    color:#815410;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 35px;
+    margin-left: 13px;
+    margin-top: 100px;
 }
 
 button.person:hover {
-    background-color: #0056b3; 
+    background-color: #c7a675; 
 }
 
 
@@ -1058,7 +1076,7 @@ button:hover {
 }
 h1 {
     text-align: center;
-    color: #333;
+    color:#815410;
 }
 form {
     margin-top: 20px;
@@ -1067,7 +1085,7 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #555;
+    color: #ca9443;
 }
 input[type="text"],
 input[type="email"],
@@ -1082,7 +1100,7 @@ input[type="tel"] {
 .button_curso {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #c7a675;
     color: white;
     border: none;
     border-radius: 4px;
@@ -1090,7 +1108,7 @@ input[type="tel"] {
     cursor: pointer;
 }
 button:hover {
-    background-color: #45a049;
+    background-color: #c7a675;
 }
 .message {
     margin-top: 15px;

@@ -77,7 +77,7 @@ function finalizarCompra() {
     const cartTotal = parseFloat(cartTotalElement.textContent.replace("R$ ", ""));
 
     // Exibe o alerta com a mensagem e o valor da compra
-    alert(`Compra realizada com sucesso!\nValor total da compra: R$ ${cartTotal.toFixed(2)}`);
+    alert(`Compra realizada com sucesso :) Preencha o Formulario abaixo para participar do nosso Mini curso de Artesanto !!\nValor total da compra: R$ ${cartTotal.toFixed(2)}`);
 
     // Seleciona a tabela do carrinho
     const tabelaCarrinho = document.querySelector('.cart-table tbody');
